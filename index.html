@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타쉽엔터테인먼트</title>
+    <!--파비콘 설정-->
+    <link rel="icon" href="favicon.png">
+
+    <!--브라우저 초기화 reset-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-new-css-reset@1.5.1/css/reset.min.css">
+
+    <!--구글 폰트 설정-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <!--구글 material icon 설정-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!--lodash-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- gsap 애니메이션 제어/scroll/top -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js" integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!--slick-->
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--main.css-->
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- defer: 자바스크립트 읽히는 순서를 뒤로 -->
+    <script defer src="js/jquery.min.js"></script>
+    <script defer src="js/swiper.min.js"></script>
+    <script defer src="js/slick.min.js"></script>
+    <script defer src="js/starship.js"></script>
+    <script defer src="js/swiper-slide.js"></script>
+    <script defer src="js/slick-slide.js"></script>
+    <script defer src="js/sidemenu.js"></script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <h1><a href="starship.html"><img src="img/LOGO/STARSHIP-logo.png" alt="스타쉽엔터테인먼트"></a></h1>
+            <!-- 메뉴 - PC -->
+            <nav id="gnb-pc">
+                <ul class="menu">
+                    <li><a href="javascript:void(0)">COMPANY</a></li>
+                    <li><a href="javascript:void(0)">ARTISTS</a></li>
+                    <li><a href="javascript:void(0)">PR CENTER</a></li>
+                    <li><a href="javascript:void(0)">AUDITION</a></li>
+                    <li><a href="javascript:void(0)">STARSHIP SQUARE</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+            <!-- 메뉴 - MOBILE,TAB -->
+            <nav id="gnb-mo">
+                <div class="gnb-title">
+                    <img src="img/LOGO/STARSHIP-logo.png" alt="">
+                </div>
+                <!-- SEARCH -->
+            <div class="search-mo">
+                <input type="text" placeholder="검색어를 입력하세요">
+                <span class="material-icons">
+                    search
+                </span>
+            </div>
+                <ul class="menu">
+                    <li class="item">
+                        <a href="javascript:void(0)">COMPANY</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)">회사소개</a></li>
+                            <li><a href="javascript:void(0)">대표인사말</a></li>
+                            <li><a href="javascript:void(0)">연혁</a></li>
+                            <li><a href="javascript:void(0)">사업현황</a></li>
+                            <li><a href="javascript:void(0)">오시는 길</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="javascript:void(0)">ARTISTS</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)">SINGER</a></li>
+                            <li><a href="javascript:void(0)">ACTOR</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="javascript:void(0)">PR CENTER</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)">NOTICE</a></li>
+                            <li><a href="javascript:void(0)">MULTIMEDIA</a></li>
+                            <li><a href="javascript:void(0)">NEW RELEASE</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="javascript:void(0)">AUDITION</a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void(0)">지원안내</a></li>
+                            <li><a href="javascript:void(0)">지원하기</a></li>
+                            <li><a href="javascript:void(0)">FAQ</a></li>
+                        </ul>
+                    </li>
+                    <li class="item">
+                        <a href="javascript:void(0)">STARSHIP SQUARE</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- menu-toggle-btn -->
+            <div class="menu-toggle-btn">
+                <div id="one"></div>
+                <div id="two"></div>
+                <div id="three"></div>
+            </div>
+    </header>
+
+    <!-- SLIDE - PC,TAB -->
+    <section class="slide-PC">
+        <h2 class="hidden">PC,TAB형 슬라이드</h2>
+        <div class="swiper-PC">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/pc-slide1_bona.jpg" alt="스물다섯스물하나-보나"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/pc-slide2_kihyun.jpg" alt="VOYAGER-기현"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/pc-slide3_gwangsu-subin.jpg" alt="해적2-광수,수빈"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/pc-slide4_yeonseok.jpg" alt="젠틀맨스가이드-연석"></a></div>
+            </div>
+
+            <div class="swiper-pagination pager-pc"></div>
+          </div>
+    </section>
+
+    <!-- SLIDE - MOBILE -->
+    <section class="slide-MO">
+        <h2 class="hidden">MOBILE형 슬라이드</h2>
+        <div class="swiper-MO">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/mobile-slide1_bona.jpg" alt="스물다섯스물하나-보나"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/mobile-slide2_kihyun.jpg" alt="VOYAGER-기현"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/mobile-slide3_gwangsu-subin.jpg" alt="해적2-광수,수빈"></a></div>
+              <div class="swiper-slide"><a href="javascript:void(0)"><img src="img/SLIDE/mobile-slide4-yeonseok.jpg" alt="젠틀맨스가이드-연석"></a></div>
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+
+
+    <!-- NEW-RELEASE -->
+    <section class="new-release">
+        <div class="inner">
+            <div class="title"><span class="title-bar"></span><h2>NEW RELEASE</h2></div>
+            <div class="swiper CDSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="CD CD1">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD1-wjsn.png" alt="우주소녀쪼꼬미-슈퍼 그럼요"></a>
+                        <div class="CD-info">
+                            <h3>슈퍼 그럼요</h3>
+                            <p>우주소녀 쪼꼬미</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD2">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD2-monstax1.png" alt="몬스타X-DREAMING"></a>
+                        <div class="CD-info">
+                            <h3>DREAMING</h3>
+                            <p>MONSTAX(몬스타엑스)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD3">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD3-ive.png" alt="아이브-ELEVEN"></a>
+                        <div class="CD-info">
+                            <h3>ELEVEN</h3>
+                            <p>IVE (아이브)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD4">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD4-godak.png" alt="고닥-우리는 모두 어른이 될 수 없었다"></a>
+                        <div class="CD-info">
+                            <h3 class="cd4mo">우리는 모두 어른이<br> 될 수 없었다</h3>
+                            <h3 class="cd4tab">우리는 모두 어른이 될 수 없었다</h3>
+                            <p>GODAK (고닥)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD5">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD5-monstax2.png" alt="몬스타X-NO LIMIT"></a>
+                        <div class="CD-info">
+                            <h3>NO LIMIT</h3>
+                            <p>MONSTAX (몬스타엑스)</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+        </div>
+    </section>
+
+    <section class="new-release-PC">
+        <div class="inner">
+            <div class="title"><span class="title-bar"></span><h2>NEW RELEASE</h2></div>
+            <div class="swiper CDSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="CD CD1">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD1-wjsn.png" alt="우주소녀쪼꼬미-슈퍼 그럼요"></a>
+                        <div class="CD-info">
+                            <h3>슈퍼 그럼요</h3>
+                            <p>우주소녀 쪼꼬미</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD2">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD2-monstax1.png" alt="몬스타X-DREAMING"></a>
+                        <div class="CD-info">
+                            <h3>DREAMING</h3>
+                            <p>MONSTAX(몬스타엑스)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD3">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD3-ive.png" alt="아이브-ELEVEN"></a>
+                        <div class="CD-info">
+                            <h3>ELEVEN</h3>
+                            <p>IVE (아이브)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD4">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD4-godak.png" alt="고닥-우리는 모두 어른이 될 수 없었다"></a>
+                        <div class="CD-info">
+                            <h3 class="cd4mo">우리는 모두 어른이<br> 될 수 없었다</h3>
+                            <h3 class="cd4tab">우리는 모두 어른이 될 수 없었다</h3>
+                            <p>GODAK (고닥)</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="CD CD5">
+                        <a href="javascript:void(0)"><img src="img/NEWRELEASE/CD5-monstax2.png" alt="몬스타X-NO LIMIT"></a>
+                        <div class="CD-info">
+                            <h3>NO LIMIT</h3>
+                            <p>MONSTAX (몬스타엑스)</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+    </section>
+
+    <!-- MULTIMEDIA -->
+    <section class="multimedia">
+        <div class="title"><span class="title-bar"></span><h2>MULTIMEDIA</h2></div>
+        <span  class="mmore"><a href="javascript:void(0)">More+</a></span>
+        <div class="container">
+            <div class="slider-for">
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/K26EZJVHakE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/USpbn6VBbcU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TJNNXQ4cSqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/wrjXInQR6D0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/sHbEVyQxC5Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="m-ytb">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/4Fbb8ajtcpY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <div class="slider-nav">
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb1.webp" alt="기현-'VOYAGER'MV">
+                </div>
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb2.webp" alt="기현-'VOYAGER'Preview">
+                </div>
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb3.webp" alt="보나-'스물다섯스물하나'보너스컷">
+                </div>
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb4.webp" alt="IVE-'REI'Behind">
+                </div>
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb5.webp" alt="기현-'VOYAGER'Teaser1">
+                </div>
+                <div class="nav-ytb">
+                    <img src="img/Youtube/ytb6.webp" alt="IVE-'Wonyoung'Behind">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WORKS -->
+    <section class="work">
+        <div class="inner">
+            <div class="title"><span class="title-bar"></span><h2>WORKS</h2></div>
+            <div class="work-slider">
+                <div class="poster poster1"><a href="javascript:void(0)"><img src="img/WORK/works1-pirate2.jpg" alt="해적2"></a></div>
+                <div class="poster poster2"><a href="javascript:void(0)"><img src="img/WORK/works2-ghost_doctor.jpg" alt="고스트닥터"></a></div>
+                <div class="poster poster3"><a href="javascript:void(0)"><img src="img/WORK/works3-2521.jpg" alt="스물다섯스물하나"></a></div>
+                <div class="poster poster4"><a href="javascript:void(0)"><img src="img/WORK/works4-happy_new_year.jpg" alt="해피뉴이어"></a></div>
+                <div class="poster poster5"><a href="javascript:void(0)"><img src="img/WORK/works5-rookie_cops.jpg" alt="경찰수업"></a></div>
+            </div>
+        </div>
+    </section>
+
+
+    
+
+
+    <!-- BANNER - PC,TAB -->
+    <section class="banner-PC">
+        <div class="inner">
+            <h2 class="hidden">배너영역</h2>
+            <div class="fade-in">
+                <img src="img/BANNER/banner-character.png" alt="크크루 캐릭터 이미지">
+            </div>
+            <div class="contents">
+                <div class="text">
+                    <img src="img/BANNER/banner-text.png" alt="크래비티가 직접 만든 크크루">
+                </div>
+                <div class="ssbtn">
+                    <a href="javascript:void(0)" class="btn btn--gold">STARSHIP SQUARE ></a>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <!-- BANNER - MOBILE -->
+    <section class="banner-MO">
+        <div class="inner">
+            <h2 class="hidden">배너영역</h2>
+            <div class="fade-in">
+                <img src="img/BANNER/banner-character.png" alt="크크루 캐릭터 이미지">
+            </div>
+            <div class="text">
+                <img src="img/BANNER/banner-text.png" alt="크래비티가 직접 만든 크크루">
+            </div>
+            <div class="ssbtn">
+                <a href="javascript:void(0)" class="btn">STARSHIP SQUARE ></a>
+            </div>
+        </div> 
+    </section>
+
+
+    <!-- COMMUNITY -->
+    <section class="community">
+        <div class="inner">
+            <div class="title"><span class="title-bar"></span><h2>COMMUNITY</h2></div>
+            <!--PC & TAB & MOBILE-->
+            <div class="container-TM">
+                <a href="javascript:void(0)" class="box box1">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY1-KIHYUN1.jpg" alt="기현-솔로앨범 파워">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            몬스타엑스 기현, 주헌.아이엠 이어 솔로 파워 보여줄까?
+                        </h4>
+                        <p>
+                            '믿듣퍼 장인' 몬스타엑스가 세계 음원 차트를 정복했다. 완전체 활동은 물론 솔로 앨범으...
+                        </p>
+                        <p>2022 . 03 . 09</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box2">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY2-IVE.jpg" alt="아이브-일레븐뮤비 1억뷰 돌파">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            아이브, 데뷔곡'일레븐(ELEVEN))'<br>뮤비 1억뷰 돌파
+                        </h4>
+                        <p>
+                            신인 걸그룹 아이브의 데뷔곡 '일레븐(ELEVEN)' 뮤직비디오 유튜브 조회수가 1억 건을 넘겼다...
+                        </p>
+                        <p>2022 . 03 . 09</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box3">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY3-YEONSEOK.jpg" alt="유연석-배니싱 영화">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            글로벌 프로젝트 '배니싱:미제사건',<br>색다른 범죄 스릴러 온다
+                        </h4>
+                        <p>
+                            8일 영화 '배니싱: 미제사건'(감독 드니 데르쿠르)의 라이브컨퍼런스가 열렸다. 이날 행사는 ...
+                        </p>
+                        <p>2022 . 03 . 08</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box4">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY4-EXY.png" alt="엑시-아작아작 음원 합작 프로그램">
+                    </div>
+                    <div class="content">
+                        <h4>러블리즈 출신 케이-우주소녀 엑시,<br>음원 합작 프로젝트</h4>
+                        <p>
+                            걸그룹 러블리즈 출신 케이와 우주소녀 엑시가 만난다. 케이와 엑시가 유튜브 오리지널 콘텐...
+                        </p>
+                        <p>2022 . 03 . 08</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box5">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY5-CRAVITY.jpg" alt="크래비티-앨범컴백">
+                    </div>
+                    <div class="content">
+                        <h4>크래비티 우빈X원진X민희,<br>아드레날린 샘솟는 소년미</h4>
+                        <p>
+                            그룹 크래비티(CRAVITY)가 소년미 가득한 3인 3색 티저 콘텐츠를 공개했다. 크래비티는 지난...
+                        </p>
+                        <p>2022 . 03 . 08</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box6">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY6-LUDA.png" alt="루다-생일기념 'BIRTHDAY'커버">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            우주소녀 루다, 생일맞이 'BIRTHDAY'<br>커버... 러블리 매력 끝판왕
+                        </h4>
+                        <p>
+                            그룹 우주소녀(WJSN) 루다가 생일을 맞아 팬들을 위한 랜선 생일 파티를 준비했다. 지난 6일...
+                        </p>
+                        <p>2022 . 03 . 07</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box7">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY7-KWILL.jpg" alt="케이윌-15주년 기념 메들리">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            케이윌, 데뷔 15주년 기념 라이브 메들리 영상공개 '믿듣 보컬리스트'의 품격
+                        </h4>
+                        <p>
+                            가수 케이윌(K.will)이 품격이 다른 라이브를 선사했다. 케이윌은 지난 6일 공식 유튜브 채널...
+                        </p>
+                        <p>2022 . 03 . 07</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box8">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY8-SUBIN.jpg" alt="채수빈-닥터디퍼런트 모델 발탁">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            닥터디퍼런트, 새로운 브랜드 뮤즈로<br>'배우 채수빈' 발탁
+                        </h4>
+                        <p>
+                            (주)다른코스메틱스의 코스메슈티컬 브랜드 닥터디퍼런트는 올 봄 브랜드 뮤즈로 배우 채수빈을...
+                        </p>
+                        <p>2022 . 03 . 07</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box9">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY9-MINHUI.jpg" alt="민희-복면가왕 출연">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            크래비티 민희, '복면가왕'서 숨겨진<br>보컬 실력 발휘
+                        </h4>
+                        <p>
+                            그룹 크래비티(CRAVITY) 민희가 숨겨진 보컬 실력으로 찬사를 받았다. 민희는 지난달 27일과 ...
+                        </p>
+                        <p>2022 . 03 . 07</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box10">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY10-BONA.jpg" alt="보나-스물다섯스물하나 연기">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            '스물다섯 스물하나' 보나,<br>날카롭고 부드러운 칼
+                        </h4>
+                        <p>
+                            매주 토요일과 일요일, 보나의 부드러우면서도 날카로운 칼끝이 시청자들의 마음을 향하고 ...
+                        </p>
+                        <p>2022 . 03 . 05</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box11">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/community11-GWANGSU.jpg" alt="이광수-어쩌다사장2 '만능 엔터'">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            '어쩌다 사장2' 조인성,<br>'이광수는 만능 엔터' 폭풍 칭찬
+                        </h4>
+                        <p>
+                            배우 이광수가 옛날 예능인과 배우 사이에 고민이 있었다는 사실을 드러났다. 지난 3일 방송된...
+                        </p>
+                        <p>2022 . 03 . 04</p>
+                    </div>
+                </a>
+                <a href="javascript:void(0)" class="box box12">
+                    <div class="img-wrapper">
+                        <img src="img/COMMUNITY/COMMUNITY12-KIHYUN2.jpg" alt="기현-15일 솔로앨범(VOYAGER)">
+                    </div>
+                    <div class="content">
+                        <h4>
+                            몬스터엑스 기현, 15일 '보이저'...<br>여행자가 꿈꾸는 세상
+                        </h4>
+                        <p>
+                            그룹 몬스타엑스(MOSTA X) 기현이 3일 첫 번째 싱글 '보이저(VOYAGER)'의 섬웨어 버전 콘...
+                        </p>
+                        <p>2022 . 03 . 03</p>
+                    </div>
+                </a>
+            </div>
+            <div class="btncontainer">
+                <div class="more">
+                    <a href="javascript:void(0)" class="btn1 btn--black">MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <ul class="footer-menu">
+        <li><a href="javascript:void(0)">AUDITION</a></li>
+        <li><a href="javascript:void(0)">CONTACT</a></li>
+    </ul>
+    <footer>
+        <div class="inner">
+            <h5><a href="starship.html"><img src="img/LOGO/STARSHIP-FOOTER.png" alt="스타쉽엔터테인먼트"></a></h5>
+            <address>
+                <div>
+                    서울시 강남구 삼성로 146길 4-5 스타쉽ENT(06070)<br>
+                    4-5, Samseong-ro 146-gil, Gangnam-gu, Seoul
+                </div>
+                <div>
+                    스타쉽ENT의 모든 컨텐츠는 저작권의 보호를 받고 있습니다.<br>
+                    Copyright @ STARSHIP ENT all rights Reserved.
+                </div>
+            </address>
+        </div>
+        <div class="sns">
+            <div class="starship">
+                <p>STARSHIP</p>
+                <ul class="s-sns">
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/vlive.png" alt="vlive"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/navertv.png" alt="navertv"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/naverpost.png" alt="naverpost"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/facebook.png" alt="facebook"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/youtube.png" alt="youtube"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/twitter.png" alt="twitter"></a></li>
+                </ul>
+            </div>
+            <div class="kinkong">
+                <p>KINGKONG by STARSHIP</p>
+                <ul class="k-sns">
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/vlive.png" alt="vlive"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/navertv.png" alt="navertv"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/naverpost.png" alt="naverpost"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/facebook.png" alt="facebook"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/youtube.png" alt="youtube"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/Instagram.png" alt="Instagram"></a></li>
+                    <li><a href="javascripg:void(0)"><img src="img/SNS/weibo.png" alt="weibo"></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
